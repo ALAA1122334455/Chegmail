@@ -1,5 +1,4 @@
 from flask import Flask, jsonify
-from proxy_checking import ProxyChecker
 from fp.fp import FreeProxy
 from requests import post as pp
 from user_agent import generate_user_agent as gg
@@ -20,14 +19,8 @@ def getproxy():
     proxy = FreeProxy(google=True).get().split('//')[1]
     checker = ProxyChecker()
     get = checker.check_proxy(proxy)
-    if get['status'] == True:
-        type1 = get['type']
-        for type in type1:
-            ip = {f'{type}': f'{type}://{proxy}'}
-            return ip
-    else:
-        getproxy()
-
+    ip = {'http': f'http://{proxy}'}
+    return ip
 def tll():
     yy='azertyuiopmlkjhgfdsqwxcvbn'
     try:
