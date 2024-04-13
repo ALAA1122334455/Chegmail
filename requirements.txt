@@ -2,4 +2,4 @@ Flask==3.0.3
 requests==2.31.0
 free-proxy==1.1.1
 proxy-checking==0.0
-user-agent==2.2.0
+user-agent==0.1.10
