@@ -1,13 +1,5 @@
-flask
-requests
-gunicorn
-pyshorteners
+Flask==3.0.3
+requests==2.31.0
 free-proxy==1.1.1
 proxy-checking==0.0
-
-
-requests
-random
-
-user-agent
-
+user-agent==2.2.0
