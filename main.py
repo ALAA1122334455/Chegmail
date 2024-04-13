@@ -87,5 +87,3 @@ def check_gmail(email):
             return {'result': 'Taken','dev':'3laa'}
     except:
         check_gmail(email)
-if __name__=='__main__':
-  app.run()
